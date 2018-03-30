@@ -564,5 +564,16 @@ slider-- > .logo-new-customize {
     }
 }
 
-@media screen and (max-width: 412px) {
+.see-all-btn {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+    .see-all-btn > i {
+        padding-right: 2px
+    }
+
+.record-not-found {
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    padding: 16px;
 }

@@ -1,0 +1,19 @@
+.navbar-rb {
+    background: #313c64;
+    border-radius: 0px;
+    /* border: 1px solid #ccc; */
+    color: white;
+    margin-top: -7px;
+}
+
+.navbar-rb-search-control {
+    height: 36px;
+    width: 600px;
+    font-size: 15px;
+    padding: 2px;
+    color: black;
+}
+.navbar-rb-btn {
+    border: 1px solid #ccc;
+    height: 36px;
+}

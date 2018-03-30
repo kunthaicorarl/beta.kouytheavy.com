@@ -236,6 +236,7 @@ video::-webkit-media-controls {
     border-bottom: 1px solid #ccc;
     margin-bottom: 6px;
     font-weight: 800;
+  
 }
 .videre-list {
     background: #b2b1b1;
@@ -243,9 +244,10 @@ video::-webkit-media-controls {
     border: 1px solid #0c0b0b;
     font-weight: 600;
     font-family: arial;
+    border: 1px solid #0c0b0b;
 }
 .videre-item-container {
-    width: 31%;
+    width: 29%;
     float: right;
 }
 .videre-list > div.col-md-4 {

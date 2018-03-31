@@ -17,3 +17,20 @@
     border: 1px solid #ccc;
     height: 36px;
 }
+@media only screen and (max-width:768px){
+.navbar-rb-search-control{
+    width: 83%;
+    float: left;
+}
+.navbar-rb-btn{
+    float: right;
+    margin-top: -5px;
+    margin-left: 2px;
+}  
+.navbar-rb{
+    margin-bottom: 9px;
+} 
+.navbar-rb>div{
+    padding-bottom: 13px;
+}
+}

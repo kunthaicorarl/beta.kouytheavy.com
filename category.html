@@ -1,19 +1,18 @@
 ﻿
 <div>
         <div class="container backgroupd-container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            <img src="//i.ytimg.com/i/-9-kyTW8ZkZNDHQJ6FgpwQ/1.jpg" class="avatar-xs">
-                              Category
-                            <small>
-                                <h5 class="pull-right">
-                                    <a href="javascript:;" class="see-all-btn"><i class="fa fa-youtube-play" aria-hidden="true"></i>View All</a>
-                                </h5>
-                            </small>
-                        </h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <button data-ng-click="window.history.back()">Back</button>
+                        <div class="view-all">
+                            <h5 class="pull-right">
+                                <a href="javascrpt:;" class="see-all-btn"><i class="fa fa-youtube-play" aria-hidden="true"></i>TITLE</a>
+                            </h5>
+                        </div>
                     </div>
                 </div>
+        
                 <!-- Projects Row -->
                 <div infinite-scroll='vm.initPostByCategory()' infinite-scroll-distance='2' class="row">
                     <div class="col-md-3 portfolio-item" ng-repeat="subRow in vm.dataDisplay">

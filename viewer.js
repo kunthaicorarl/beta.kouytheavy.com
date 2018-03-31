@@ -4,7 +4,8 @@
     '$http',
     '$stateParams',
     '$compile',
-    function (cfpLoadingBar, $scope, $http, $stateParams, $compile) {
+    '$state',
+    function (cfpLoadingBar, $scope, $http, $stateParams, $compile, $state) {
         var vm = this;
         vm.displayVideo = {protected:false,items:[]};
         vm.initVideoData = function (password) {
@@ -61,7 +62,9 @@
                     });
         }
         vm.initVideoData();
-       
+        vm.back=function(){
+            $state.go("home_page");
+        }
    
         vm.save = function () {
          //   $scope.contractForm.$submitted = true;

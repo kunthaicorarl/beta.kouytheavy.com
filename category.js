@@ -3,11 +3,13 @@ myApp.controller("categoryController", [
     '$scope',
     '$http',
     '$stateParams',
+    '$state',
     function (
         cfpLoadingBar,
         $scope,
         $http,
-        $stateParams
+        $stateParams,
+        $state,
     ) {
         var vm = this;
       
@@ -61,5 +63,8 @@ myApp.controller("categoryController", [
             }
         }   
         vm.initPostByCategory();
+        vm.back = function () {
+            $state.go("home_page");
+        }
     }
 ]);

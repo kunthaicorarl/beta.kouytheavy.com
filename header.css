@@ -60,3 +60,12 @@
         margin: 7px 90px !important;
     }
 }
+
+@media only screen and (min-width:300px) and (max-width:345px) {
+    .navbar-rb-search-control {
+        width: 63%;
+    }
+    .navbar-form {
+      height:60px;
+    }
+ }

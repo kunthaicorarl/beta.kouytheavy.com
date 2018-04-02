@@ -87,6 +87,10 @@ myApp.controller("homeController", [
                             thumb = 'photo/thumbnail/thumbnail-rich-dad-poor-dad.png';
                         } else if (objCategory.id == 37) {
                             thumb = 'photo/thumbnail/the-wealth-of-nations.png';
+                        } else if (objCategory.id == 27) {
+                            thumb = 'photo/thumbnail/thumbnail-cashflow.png';
+                        } else if (objCategory.id == 1) {
+                            thumb = 'photo/thumbnail/thumbnail-how-to-get-rich.png';
                         } else {
                             thumb = '';
                         }

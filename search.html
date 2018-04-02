@@ -1,0 +1,34 @@
+﻿
+        <div class="container backgroupd-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <button data-ng-click="vm.back()"><i class="fa fa-angle-left"></i>Back</button>
+                        <div class="view-all">
+                            <h5 class="pull-right">
+                                <a href="javascrpt:;" class="see-all-btn"><i class="fa fa-youtube-play" aria-hidden="true"></i>TITLE</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" ng-if="!dataDisplayBySearch.length" text-center"  style="height: 150px;">
+                    <div class="col-md-12 text-center record-not-found">
+                        Record Yet Add or Not Found
+                    </div>
+                </div>
+                <!-- Projects Row -->
+                <div>
+                    <div ng-if="dataDisplayBySearch.length" class="col-md-3 portfolio-item" ng-repeat="subRow in dataDisplayBySearch">
+                        <a ui-sref="viewer({id:subRow.id})">
+                            <div afkl-lazy-image="{{subRow.thumbnail}}"
+                                 class="afkl-lazy-wrapper afkl-img-ratio-1-1 own-classname"></div>
+                            <h6 class="text-overflow-title">{{subRow.title}}</h6>
+                        </a>
+                        <a href="#"><h6>{{subRow.status}}</h6></a>
+                        <p>
+                            {{subRow.price}} riels
+                        </p>
+                    </div>
+                </div>
+            </div>
+         </div>

@@ -56,11 +56,11 @@
         <script src="robertDailog.js"></script>
         <link rel="stylesheet" href="robertViewer.css" />
         <script src="robertViewer.js"></script>
-        <!--Directive-->
+        <!--Controller-->
         <script src="home.js"></script>
         <script src="category.js"></script>
         <script src="viewer.js"></script>
-
+        <script src="search.js"></script>
 	</head>
 	<body>
 	
@@ -95,11 +95,11 @@
                                 <li class="active"><a href="#">ទំព័រដើម</a></li>
                                 <li class="active"><a href="#">សមាជិក</a></li>
                             </ul>
-                            <form class="navbar-form navbar-left" action="/action_page.php">
+                            <form class="navbar-form navbar-left">
                                 <div class="form-group">
-                                    <input type="text" class="navbar-rb-search-control" placeholder="Search">
+                                    <input type="text" my-enter ng-model="searchText" class="navbar-rb-search-control" placeholder="Search">
                                 </div>
-                                <button type="submit" class="navbar-rb-btn">Submit</button>
+                                <button class="navbar-rb-btn" ng-click="searchData()">Submit</button>
                             </form>
                         </div>
                     </nav>

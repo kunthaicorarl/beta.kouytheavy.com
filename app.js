@@ -8,7 +8,19 @@ var myApp = angular.module('appModule', [
     'infinite-scroll',
     'ui.carousel'
 ]);
+myApp.directive('myEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if (event.which === 13) {
+                scope.$apply(function () {
+                    scope.$eval(attrs.myEnter);
+                });
 
+                event.preventDefault();
+            }
+        });
+    };
+});
 
 myApp.directive("scroll", function ($window) {
     return function (scope) {
@@ -62,10 +74,50 @@ myApp.config([
             templateUrl: 'viewer.html',
             controller: 'viewerController as vm'
         }
+        var search = {
+            name: 'search',
+            url: '/search',
+            templateUrl: 'search.html',
+            controller: 'searchController as vm'
+        }
        
         $stateProvider.state(home);
         $stateProvider.state(viewer);
         $stateProvider.state(videoByCategory);
-       
+        $stateProvider.state(search);
     }
 ]);
+
+myApp.run(["$rootScope", "$http","$state", function ($rootScope, $http,$state) {
+
+    $rootScope.searchData = function (callback) {
+        $state.go("search");
+        $rootScope.dataDisplayBySearch = [];
+        var input = {
+            search: $rootScope.searchText,
+        };
+        $http({
+            url: "http://www.kouytheavy.com/wp-json/wp/v2/posts?_embed",
+            method: "GET",
+            params: input
+        }).then(function (result) {
+            angular.forEach(result.data, function (item) {
+                var obj = {
+                    "id": item.id,
+                    "title": item.title.rendered,
+                    "thumbnail": item._embedded["wp:featuredmedia"][0].source_url,
+                    "link": item.link,
+                    "status": "Free",
+                    "price": 0
+                };
+                $rootScope.dataDisplayBySearch.push(obj);
+            });
+        }, function (error) {
+            return;
+        });
+
+    };
+   
+}]);
+
+

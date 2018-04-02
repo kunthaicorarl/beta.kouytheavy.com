@@ -12,7 +12,7 @@
                 password: "="
             },
             template: '\
-            <div class="col-md-12" ng-if="!html.protected" >\
+            <div ng-if="!html.protected" >\
             <div class="col-md-8" style="padding: 2px;" >\
             <div id="player"></div>\
              </div>\

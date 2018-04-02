@@ -19,7 +19,7 @@
 }
 @media only screen and (max-width:768px){
 .navbar-rb-search-control{
-    width: 83%;
+    width: 65%;
     float: left;
 }
 .navbar-rb-btn{
@@ -33,4 +33,30 @@
 .navbar-rb>div{
     padding-bottom: 13px;
 }
+}
+
+.robert-navbar-nav > li > a {
+    color:white;
+}
+.mob-title-home-page {
+   display:none;
+}
+@media only screen and (max-width:768px) {
+    .mob-title-home-page {
+        display: block;
+        float: left;
+        width: 17%;
+        line-height: 37px;
+    }
+    .mob-title-home-page-not-desktop {
+     display:none;
+    }
+    .ads-top-banner {
+        padding: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .navbar-header {
+        margin: 7px 90px !important;
+    }
 }

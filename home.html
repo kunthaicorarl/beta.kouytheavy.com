@@ -1,4 +1,5 @@
 ﻿
+  <robert-owl-carousel></robert-owl-carousel>
 <div infinite-scroll='vm.initCategory()'  infinite-scroll-distance='2'>
         <div class="container backgroupd-container" ng-repeat="row in vm.dataDisplay">
                 <div class="row">
@@ -17,7 +18,7 @@
                 <!-- Projects Row -->
                 <div class="row" ng-if="!row.isLoading">
                     <div class="col-md-3 portfolio-item" ng-repeat="subRow in row.items"  ng-if="row.items.length">
-                        
+
                         <a ui-sref="viewer({id:subRow.id})" >
                             <div afkl-lazy-image="{{subRow.thumbnail}}"
                                  class="afkl-lazy-wrapper afkl-img-ratio-1-1 own-classname"></div>

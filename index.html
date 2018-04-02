@@ -9,7 +9,7 @@
 		<meta name="description" content="Youtube">
 		<meta name="author" content="Johan">
 		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-		<title>Accueil - Youtube</title>
+		<title>Kouytheavy | University of Money</title>
 		<!-- <link rel="stylesheet" type="text/css" href="assets/css/app.css"> -->
 	
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
@@ -44,23 +44,29 @@
         <!------ Include videre ---------->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/fonts/ionicons.eot">
-        <link href="https://fonts.googleapis.com/css?family=Hanuman:400,700&amp;subset=khmer" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Hanuman:400,700&amp;subset=khmer" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Koulen" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Battambang" rel="stylesheet"/>
         <script src="lib/videre/videre.js"></script>
         <link href="lib/videre/videre.css" rel="stylesheet" />
+        <link href="lib/OwlCarousel2/owl.carousel.min.css" rel="stylesheet" />
+        <link href="lib/OwlCarousel2/owl.theme.default.min.css" rel="stylesheet" />
+        <script src="lib/OwlCarousel2/owl.carousel.min.js"></script>
         <!------ Include videre ---------->
         <link href="header.css" rel="stylesheet" />
         <link href="common.css" rel="stylesheet"/>
-       
         <script src="app.js"></script>
         <!--Directive-->
         <script src="robertDailog.js"></script>
         <link rel="stylesheet" href="robertViewer.css" />
         <script src="robertViewer.js"></script>
+        <script src="directives/RobertOwlCarousel/RobertOwlCarousel.js"></script>
         <!--Controller-->
         <script src="home.js"></script>
         <script src="category.js"></script>
         <script src="viewer.js"></script>
         <script src="search.js"></script>
+        
 	</head>
 	<body>
 	
@@ -89,14 +95,22 @@
                     <nav class="navbar navbar-rb">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="#">Kouytheavy.com</a>
+                                <a class="navbar-brand" href="#" style="
+                                    text-align: center;
+                                    color: white;
+                                    font-weight: 700;
+                                "><div style="line-height: 8px;font-family: sans-serif !important;">KOUYTHEAVY</div><span style="font-size:10px;font-family: sans-serif !important;">University of Money</span></a>
+                             
                             </div>
-                            <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav robert-navbar-nav mob-title-home-page-not-desktop">
                                 <li class="active"><a href="#">ទំព័រដើម</a></li>
-                                <li class="active"><a href="#">សមាជិក</a></li>
                             </ul>
                             <form class="navbar-form navbar-left">
                                 <div class="form-group">
+                                    <a href="#" class="mob-title-home-page" style="
+                                        float: left;
+                                        width: 17%;
+                                    ">ទំព័រដើម</a>
                                     <input type="text" my-enter ng-model="searchText" class="navbar-rb-search-control" placeholder="Search">
                                 </div>
                                 <button class="navbar-rb-btn" ng-click="searchData()">Submit</button>
@@ -105,13 +119,21 @@
                     </nav>
 
                 </div>
-
                 <section class='wrapper'>
-
-                    <ui-view></ui-view>
+                    <div class="container backgroupd-container">
+                       <div class="col-md-4 mob-title-home-page-not-desktop">
+                           <img  style="width: 83%;"   src="http://www.kouytheavy.com/logo-2.png" alt="www.kouytheavy.com" title="kouytheavy.com"/>
+                       </div>
+                        <div class="col-md-8 ads-top-banner">
+                            <img style="width:100%"  src="http://www.kouytheavy.com/banner-top.png" alt="www.kouytheavy.com" title="kouytheavy.com" />
+                        </div>
+                    </div>
                 </section>
+                    <section class='wrapper'>
+                        <ui-view></ui-view>
+                    </section>
 
-            </div>
+</div>
         </div>
 
        
@@ -126,7 +148,7 @@
                         <div class="col-lg-3 col-xs-12">
                             <span class="logo">kouytheavy.com</span>
                         </div>
-                        <!--<div class="col-lg-3 col-xs-12">
+                       <!--<div class="col-lg-3 col-xs-12">
                             <h3>MENU</h3>
                             <ul>
                                 <li><a href="#">Home</a></li>
@@ -135,7 +157,8 @@
                                 <li><a href="#">About</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
-                        </div>
+                        </div>-->
+                         <!--
                         <div class="col-lg-3 col-xs-12">
                             <h3>CATEGORIES</h3>
                             <ul>
@@ -163,6 +186,6 @@
         <div class="footer-bottom">
             <p>Copyright © 2017. All right reserved.</p>
         </div>
-       
+        
 	</body>
 </html>

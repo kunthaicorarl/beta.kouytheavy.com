@@ -1,7 +1,8 @@
 body *, * {
-  outline: none;
-  box-sizing: border-box;
-  font-family: "Proxima Nova"; }
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Koulen', "Proxima Nova";
+}
 
 .flex {
   display: -webkit-flex;

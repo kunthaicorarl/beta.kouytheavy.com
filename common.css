@@ -470,7 +470,7 @@ h4 {
 
 .active {
     top: 0em;
-    z-index: 1;
+    z-index:999999;
 }
 
 .white-popup {

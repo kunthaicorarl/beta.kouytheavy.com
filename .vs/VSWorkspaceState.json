@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\directives\\RobertOwlCarousel",
+    "\\lib\\videre",
+    "\\photo",
+    "\\photo\\thumbnail"
   ],
-  "SelectedNode": "\\home.js",
+  "SelectedNode": "\\header.css",
   "PreviewInSolutionExplorer": false
 }

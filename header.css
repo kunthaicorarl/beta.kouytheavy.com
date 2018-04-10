@@ -1,9 +1,12 @@
 .navbar-rb {
-    background: #313c64;
+    background: #000000;
     border-radius: 0px;
     /* border: 1px solid #ccc; */
     color: white;
     margin-top: -7px;
+    height: 118px;
+    box-shadow: 1px 3px #bbbaba;
+    border-bottom: 4px solid #957122;
 }
 
 .navbar-rb-search-control {
@@ -26,13 +29,26 @@
     float: right;
     margin-top: -5px;
     margin-left: 2px;
-}  
-.navbar-rb{
-    margin-bottom: 9px;
-} 
+}
+    .navbar-rb {
+        margin-bottom: 9px;
+        height: 190px;
+    } 
 .navbar-rb>div{
     padding-bottom: 13px;
 }
+    .navbar-left {
+        
+        padding-top: 59px !important;
+        width: 100% !important;
+    }
+    .navbar-rb-search-control {
+        height: 36px;
+        width: 63% !IMPORTANT;
+        font-size: 14px;
+        padding: -1px;
+        color: black;
+    }
 }
 
 .robert-navbar-nav > li > a {
@@ -69,3 +85,32 @@
       height:60px;
     }
  }
+
+.logo2 {
+    line-height: 5px;
+    font-family: sans-serif !important;
+    background-image: url(../photo/logo2.png);
+    width: 82px;
+    height: 92px;
+    background-size: cover;
+    z-index: 99999999999999;
+    position: relative;
+}
+
+.navbar-nav {
+    height: 118px;
+    padding-top: 30px;
+}
+
+.navbar-left {
+    float: left !important;
+    /* height: 40px; */
+    padding-top: 30px;
+}
+
+
+@media only screen and (max-width:768px) {
+    .logo2 {
+        margin-left: 28px !important; 
+    }
+}

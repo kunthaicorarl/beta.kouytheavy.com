@@ -21,11 +21,11 @@ h4 {
 }
 
 .video-lock-container {
-    background-image: url(../photo/video-lock.png);
+    background-image: url(http://www.kouytheavy.com/beta/photo/video-lock.png);
     background-size: cover;
     width: 50%;
     height: 420px;
-    position:relative;
+    position: relative;
 }
 .sub-video-lock-container {
     margin-top: 76px;

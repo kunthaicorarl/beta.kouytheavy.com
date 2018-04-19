@@ -69,7 +69,7 @@ myApp.config([
 
         var viewer = {
             name: 'viewer',
-            url: '/viewer/:id',
+            url: '/viewer/:id?title',
             params: { id: null },
             templateUrl: 'viewer.html',
             controller: 'viewerController as vm'

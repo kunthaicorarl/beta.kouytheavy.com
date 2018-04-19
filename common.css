@@ -244,7 +244,8 @@ footer
     padding-bottom: 9px;
     margin: 6px 0 8px;
     padding: 6px;
-    /* border-bottom: 1px solid #eee; */
+    height:50px;
+        /* border-bottom: 1px solid #eee; */
     /* background: gold; */
     /* border-radius: 6px; */
     /* border: 1px solid #ccc;*/
@@ -340,16 +341,16 @@ a:hover {
             }
 
 .footer-bottom {
-    background-color: #111;
+    background-color: #0a74ff;
     color: #282c2d;
-    font-size: 12px;
+    /* font-size: 4.2em; */
     text-align: center;
     height: 50px;
     line-height: 50px;
 }
 
     .footer-bottom p {
-        font-size: 13px;
+        font-size: 18px;
         color: #FFF;
     }
 
@@ -420,13 +421,14 @@ h2 {
 .slider {
     text-align: center;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1.5em;
     position: fixed;
     top: -2em;
-    background: rgb(0, 0, 0);
-    color: rgba(255,255,255, 0.8);
+    background: #0a74ff;
+    color: rgb(255, 255, 255);
     transition: all 0.3s ease-in-out;
-    border-bottom: 0.1em solid #1A2633;
+    /* border-bottom: 0.1em solid #1A2633; */
+    padding: 4px;
 }
 
 
@@ -576,4 +578,20 @@ slider-- > .logo-new-customize {
     border: 1px solid #ccc;
     background: #f7f7f7;
     padding: 16px;
+}
+
+.viewer-title {
+    line-height: 3.5;
+    padding-left: 13px;
+}
+
+.text-trail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media only screen and (max-width:768px) {
+    .viewer-title {
+        width: 250px;
+    }
 }

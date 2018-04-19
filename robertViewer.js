@@ -17,9 +17,6 @@
             <div id="player"></div>\
              </div>\
             <div class="col-md-4 videre-item-container">\
-                <h1 class="videre-video-title">\
-                    Video TITTL\
-                     </h1>\
                 <div class="row">\
                     <div class="col-md-12 videre-list" ng-if="html.items" ng-repeat="item in html.items" ng-click="viewerVideo(item)">\
                         <div class="col-md-4">\

@@ -7,6 +7,7 @@
     '$state',
     function (cfpLoadingBar, $scope, $http, $stateParams, $compile, $state) {
         var vm = this;
+        vm.title = $stateParams.title ? $stateParams.title : "Unknown";
         vm.displayVideo = {protected:false,items:[]};
         vm.initVideoData = function (password) {
             cfpLoadingBar.start();

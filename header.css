@@ -15,12 +15,11 @@
     font-size: 15px;
     padding: 2px;
     color: black;
-    border-radius: 9px;
+    
 }
 .navbar-rb-btn {
     border: 2px solid #e9e9e9;
-    height: 30px;
-    border-radius: 10px;
+    height: 35px;
 }
 @media only screen and (max-width:768px){
 .navbar-rb-search-control{

@@ -1,12 +1,14 @@
 ﻿
   <robert-owl-carousel></robert-owl-carousel>
+
 <div infinite-scroll='vm.initCategory()'  infinite-scroll-distance='2'>
         <div class="container backgroupd-container" ng-repeat="row in vm.dataDisplay">
                 <div class="row">
                     <div class="col-lg-12">
+                       
                         <div class="page-header">
-                            <!--<img src="//i.ytimg.com/i/-9-kyTW8ZkZNDHQJ6FgpwQ/1.jpg" class="avatar-xs">-->
-                            {{row.title}}
+                            <img src="{{(row.book && row.book.bookCoverUrl?row.book.bookCoverUrl:'https://blog.stylingandroid.com/wp-content/themes/lontano-pro/images/no-image-slide.png')}}" class="avatar-xs">
+                            {{(row.book && row.book.bookTitle?row.book.bookTitle:row.title)}}
                             <div class="view-all">
                                 <h5 class="pull-right">
                                     <a ui-sref="category_page({id:row.id})" class="see-all-btn"><i class="fa fa-youtube-play" aria-hidden="true"></i>View All</a>
@@ -20,7 +22,7 @@
                     <div class="col-md-3 portfolio-item" ng-repeat="subRow in row.items"  ng-if="row.items.length">
 
                         <a ui-sref="viewer({id:subRow.id,title:subRow.title})" >
-                            <div afkl-lazy-image="{{subRow.thumbnail}}"
+                            <div afkl-lazy-image="{{(row.book && row.book.bookThumnail?row.book.bookThumnail:subRow.thumbnail)}}"
                                  class="afkl-lazy-wrapper afkl-img-ratio-1-1 own-classname"></div>
                             <h6 class="text-overflow-title">{{subRow.title}}</h6>
                         </a>

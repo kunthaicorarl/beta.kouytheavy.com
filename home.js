@@ -13,6 +13,14 @@ myApp.controller("homeController", [
         vm.dataDisplay = [];
         vm.stepNumber=[];
         vm.lockLoading = false;
+
+
+        function loadCategoryInfo(callback) {
+            $http.get('category.json')
+                .then(function (res) {
+                    callback(res);
+                });
+        }
         
         vm.initCategory = function () {
            
@@ -35,6 +43,16 @@ myApp.controller("homeController", [
                                 "items": [],
                                 "isLoading": true
                             };
+                            loadCategoryInfo(function (result) {
+                                if (result.data.length) {
+                                    result.data.filter(function (item) {
+                                        if (objInput.id == item.categoryId) {
+                                        objInput["book"] = item;
+                                        }
+                                    });
+
+                                }
+                            });
                           if(vm.dataDisplay.length)
                            {
                               var filterID = vm.dataDisplay.filter(function (item) {
@@ -83,6 +101,10 @@ myApp.controller("homeController", [
                     var items = [];
                     angular.forEach(result.data, function (item) {
                         var thumb = '';
+                        var bookInfo = {};
+                        
+
+
                         if (objCategory.id == 28) {
                             thumb = 'photo/thumbnail/thumbnail-rich-dad-poor-dad.png';
                         } else if (objCategory.id == 37) {
@@ -95,16 +117,19 @@ myApp.controller("homeController", [
                             thumb = '';
                         }
                         var obj = {
-                            "id":item.id,
+                            "id": item.id,
+                            "book": bookInfo ? bookInfo : null,
                             "title": item.title.rendered,
-                            "thumbnail": thumb ? thumb :'https://image.freepik.com/free-icon/lock-padlock-symbol-for-protect_318-50517.jpg',//(item._embedded["wp:featuredmedia"][0].source_url ? item._embedded["wp:featuredmedia"][0].source_url : (thumb !== '' ? thumb:'https://image.freepik.com/free-icon/lock-padlock-symbol-for-protect_318-50517.jpg')),
+                            "thumbnail": thumb ? thumb : 'https://image.freepik.com/free-icon/lock-padlock-symbol-for-protect_318-50517.jpg',//(item._embedded["wp:featuredmedia"][0].source_url ? item._embedded["wp:featuredmedia"][0].source_url : (thumb !== '' ? thumb:'https://image.freepik.com/free-icon/lock-padlock-symbol-for-protect_318-50517.jpg')),
                             "link": item.link,
                             "status": "Free",
                             "price": 0,
                             "isLoading": true
                         };
                         items.push(obj);
+
                     });
+
                     vm.dataDisplay = vm.dataDisplay.map(function (item) {
                         if (item.id == objCategory.id) {
                             item.items = items;

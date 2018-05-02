@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\lib",
-    "\\lib\\videre",
-    "\\photo"
+    "\\lib\\videre"
   ],
-  "SelectedNode": "\\lib\\videre\\videre.js",
+  "SelectedNode": "\\home.js",
   "PreviewInSolutionExplorer": false
 }
